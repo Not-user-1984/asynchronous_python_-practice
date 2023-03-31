@@ -9,6 +9,7 @@ server_socket.listen()
 
 to_monitor = []
 
+
 def accept_connectionn(server_soket):
         client_socket, addr = server_socket.accept()
         print(f"Соединился с {addr}")

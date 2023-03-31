@@ -1,6 +1,15 @@
 import socket
 import selectors
 
+# selectors - это встроенная библиотека Python,
+# которая предоставляет высокоуровневый интерфейс
+#  для мониторинга нескольких сокетов/каналов ввода-вывода (I/O) на события (такие как чтение или запись).
+#  Благодаря этой библиотеке можно создавать многопоточные сервера,
+#  обрабатывающие несколько клиентских соединений одновременно,
+#  что делает написание асинхронного I/O более легким и понятным. 
+# Модуль selectors также может использоваться для работы с другими объектами, 
+# такими как файлы и таймеры. Он был добавлен в стандартную библиотеку Python начиная с версии 3.4.
+
 selector = selectors.DefaultSelector()
 
 def server():
@@ -21,11 +30,11 @@ def server():
     selector.register(
         fileobj=server_socket,
         events=selectors.EVENT_READ,
-        data=accept_connectionn
+        data=accept_connection
         )
 
 
-def accept_connectionn(server_socket):
+def accept_connection(server_socket):
     """
     Установка соединения с клиентом через метод accept() объекта server_socket.
     Вывод информации о подключившемся клиенте.
