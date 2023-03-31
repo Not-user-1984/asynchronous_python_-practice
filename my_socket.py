@@ -21,9 +21,10 @@ def send_message(client_socket):
     if request:
         with open("response.txt", "r") as response_file:
             client_socket.send(response_file.read().encode())
+            print(f"ответил серверу{client_socket}")
     else:
-        print(f"Connection with {client_socket.laddr} closed.")
         client_socket.close()
+        print("сервер закрыт")
 
 
 def event_loop():
