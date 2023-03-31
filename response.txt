@@ -1,16 +1,18 @@
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
-Content-Length: 3423
 Cache-Control: max-age=3600
+Connection: close
+Transfer-Encoding: chunked
 Date: Wed, 23 Mar 2023 09:15:00 GMT
 
+13C
 <!DOCTYPE html>
 <html>
 <head>
-	<title>чат джпд лох лесной</title>
+    <title>что такое асинхронность в Python?</title>
 </head>
 <body>
-	<h1>чат джпд лох лесной</h1>
-	<p>Это пример текста, который может быть отображен на странице.</p>
+    <h1>Асинхронность в Python?</h1>
+	<h2>Лови!!!</h2>
 </body>
 </html>
